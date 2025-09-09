@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Wanna get to know each one another better</title>
+</head>
+<body>
+  <p style="position: fixed; bottom: 0; right: 0; margin: 10px;">
+    MADE BY HAKKK
+  </p>
+<div style="position: relative; height: 200px;">
+  <img width="100" src="https://static.vecteezy.com/system/resources/previews/024/635/647/large_2x/pink-bow-isolated-on-transparent-background-generative-ai-free-png.png" alt="" style="position: absolute; top: 0; left: 0;">
+</div>
+    <section class="container">
+        <h2 class="text">Wanna know each one another better??     </h2>
+        <button class="btn btnPrimary">Yes</button>
+        <button class="btn btnSecondary">No</button>
+    </section>
+
+    <script>
+        const btnAgree = document.querySelector(".btnPrimary");
+        const btnDisagree = document.querySelector(".btnSecondary");
+        const text = document.querySelector(".text");
+
+        // Agree button click
+        btnAgree.addEventListener("click", () => {
+            text.innerText = "YAYYAYAYYAYAYAY!!!";
+        });
+
+        // Disagree button dodge behavior
+        btnDisagree.addEventListener("mouseover", () => {
+            const btnWidth = btnDisagree.offsetWidth;
+            const btnHeight = btnDisagree.offsetHeight;
+            const maxX = window.innerWidth - btnWidth;
+            const maxY = window.innerHeight - btnHeight;
+
+            const randomX = Math.random() * maxX;
+            const randomY = Math.random() * maxY;
+
+            btnDisagree.style.left = randomX + "px";
+            btnDisagree.style.top = randomY + "px";
+        });
+    </script>
+    
+</body>
+</html>
